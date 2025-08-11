@@ -78,12 +78,12 @@ function App() {
           >
             <button
               aria-label="Open menu"
-              className={`text-3xl p-1 rounded-md ${theme === 'day' ? 'hover:bg-dayAccent hover:text-dayBg' : 'hover:bg-nightAccent hover:text-nightBg'} transition`}
+              className={`text-3xl p-1 rounded-md text-dayAccent ${theme === 'day' ? 'hover:bg-dayAccent hover:text-dayBg' : 'hover:bg-dayAccent hover:text-nightBg'} transition`}
               onClick={() => setMobileMenuOpen(true)}
             >
               <MdCoffee />
             </button>
-            <span className="text-2xl font-extrabold select-none text-dayPrimary">matthew pun</span>
+            <span className={`text-2xl font-extrabold select-none ${theme==='day' ? 'text-dayPrimary' : 'text-nightPrimary'}`}>matthew pun</span>
             <button
               onClick={toggleTheme}
               aria-label="Toggle theme"
