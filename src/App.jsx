@@ -673,7 +673,8 @@ function DevLog({ theme }) {
                 ? 'linear-gradient(to right, rgba(253, 246, 227,0) 0%,rgba(253, 246, 227,0.1) 2%, rgba(253, 246, 227, 0.2) 5%, rgba(253, 246, 227,0.4) 10%, rgba(253,246,227,1) 40%)'
                 : 'linear-gradient(to right, rgba(11,18,32,0) 0%, rgba(11,18,32,1) 40%)',
             }}>
-            <h3 className={`text-2xl max-w-[150px] text-right font-bold mb-5 pr-0 select-none ${theme === 'day' ? 'text-dayPrimary' : 'text-nightPrimary'}`}>
+            <h3 className={`text-2xl max-w-[150px] text-right font-bold mb-5 pr-0 select-none ${theme === 'day' ? 'text-dayPrimary' : 'text-nightPrimary'}
+            ${isSmallScreen ? 'pt-16' : ''}`}>
               Table of Contents
             </h3>
             {uniqueMonths.map((month, i) => (
