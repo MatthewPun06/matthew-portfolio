@@ -760,7 +760,7 @@ function About({ theme }) {
       title: "My Philosophy",
       content: (
         <div className="text-left">
-          <p>Work without purpose is meaningless</p>
+          <p>Work without purpose is meaningless.</p>
 
           <p className="mt-4">
             I believe that every project, no matter how big or small, should have a clear purpose behind it.
