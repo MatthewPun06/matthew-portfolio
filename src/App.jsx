@@ -32,7 +32,7 @@ const navItems = [
   // { label: 'music', to: '/music', icon: <FiMusic size={20} /> },
 ];
 
-function useIsSmallScreen(maxWidth = 800) { // default: treat <1024px as mobile mode
+function useIsSmallScreen(maxWidth = 1024) { // default: treat <1024px as mobile mode
     const [isSmall, setIsSmall] = useState(window.innerWidth < maxWidth);
 
     useEffect(() => {
@@ -70,6 +70,39 @@ function App() {
         className={`min-h-screen flex transition-colors duration-700
           ${theme === 'day' ? 'bg-dayBg text-dayPrimary' : 'bg-nightBg text-nightPrimary'}`}
       >
+        {/* Mobile Header */}
+        {isSmallScreen && (
+          <header
+            className={`fixed top-0 left-0 right-0 z-10 flex items-center justify-between px-4 py-3 shadow-md w-full z-20
+              ${theme === 'day' ? 'bg-dayBg text-dayAccent' : 'bg-nightBg text-nightAccent'}`}
+          >
+            <button
+              aria-label="Open menu"
+              className={`text-3xl p-1 rounded-md ${theme === 'day' ? 'hover:bg-dayAccent hover:text-dayBg' : 'hover:bg-nightAccent hover:text-nightBg'} transition`}
+              onClick={() => setMobileMenuOpen(true)}
+            >
+              <MdCoffee />
+            </button>
+            <span className="text-2xl font-extrabold select-none text-dayPrimary">matthew pun</span>
+            <button
+              onClick={toggleTheme}
+              aria-label="Toggle theme"
+              className={`px-3 py-1 rounded-md font-semibold
+                ${theme === 'day' ? 'bg-dayAccent text-dayBg hover:bg-dayPrimary' : 'bg-nightAccent text-nightBg hover:bg-nightPrimary'}
+                transition-colors duration-300`}
+            >
+              {theme === 'day' ? (
+                <div className="flex items-center space-x-2">
+                  <FiMoon /> <span className="hidden sm:inline">Night</span>
+                </div>
+              ) : (
+                <div className="flex items-center space-x-2">
+                  <FiSun /> <span className="hidden sm:inline">Day</span>
+                </div>
+              )}
+            </button>
+          </header>
+        )}
         {/* Left Sidebar on Desktop */}
         {!isSmallScreen && (
           <aside
@@ -154,15 +187,8 @@ function App() {
           </aside>
         )}
         {/* Mobile Menu Button */}
-        {isSmallScreen && !mobileMenuOpen && (
-          <button
-            className={`text-4xl fixed bottom-4 right-4 z-30 p-2 rounded-md shadow-md ${theme === 'day' ? 'hover:bg-dayAccent hover:text-dayBg text-dayAccent bg-dayBg' : 'hover:bg-dayAccent hover:text-nightBg text-dayAccent bg-nightBg'}`}
-            onClick={() => setMobileMenuOpen(true)}
-          >
-            <MdCoffee />
-          </button>
-        )}
-
+        {/* removed floating button; replaced by header button */}
+        
         {/* Mobile Fullscreen Menu */}
         {mobileMenuOpen && (
           <div
@@ -256,7 +282,7 @@ function App() {
           </div>
         )}
         {/* Main Content */}
-        <main className={`flex-grow relative ${isSmallScreen ? 'ml-0' : 'ml-72'}  z-10`}>
+        <main className={`flex-grow relative ${isSmallScreen ? 'ml-0 pt-16' : 'ml-72'}  z-10`}>
             {/* Fixed Background */}
             <img
               src={process.env.PUBLIC_URL + bgImage}
