@@ -11,7 +11,7 @@ function About({ theme }) {
         <>
           <p>I am currently studying Computer Science and Mathematics at Penn State University. My passion lies in creating immersive experiences through software, games, and music. When I'm not coding, you can find me running, playing volleyball, or playing the piano.</p>
           <img
-            src={process.env.PUBLIC_URL + '/images/profile.jpg'}
+            src={process.env.PUBLIC_URL + `${theme === 'day' ? '/images/profile.jpg' : '/images/profilenight.jpg'}`}
             alt="Profile Picture"
             className="rounded-full w-4/5 mx-auto mt-10 mb-5"
             />
