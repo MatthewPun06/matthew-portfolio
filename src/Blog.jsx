@@ -39,6 +39,8 @@ function Blog({ theme }) {
   const isSmallScreen = useIsSmallScreen();
 
   const logs = [
+    { title: 'rocks', month: 'December', date: '12/15/2025', content: '/blogs/12-15-25.txt' },
+    { title: 'reflections', month: 'November', date: '11/9/2025', content: '/blogs/11-9-25.txt' },
     { title: 'stained glass', month: 'October', date: '10/19/2025', content: '/blogs/10-19-25.txt'},
     { title: 'still waters run deep', month: 'October', date: '10/4/2025', content: '/blogs/10-4-25.txt'},
     { title: 'gears', month: 'September', date: '9/19/2025', content: '/blogs/9-19-25.txt' },
