@@ -6,7 +6,7 @@ function ProjectHome({ theme }) {
   const projectCards = [
     {
       title: "Myria",
-      description: "Track your workouts and progress.",
+      description: "A world-building RPG.",
       content: (
         <p>An RPG set in a fantastical world, you follow Kai, a young boy caught in the middle of a war that threatens to consume everything. He travels the world, trying to relieve the suffering and rebuild the ruins of once thriving towns. Grappling with the reailty of the world, his optimism is slowly stripped away from him even as his friends try to realize his dreams with him.</p>
       ),
@@ -14,16 +14,19 @@ function ProjectHome({ theme }) {
       downloadFile: '',
       route: "/devlog",
     },
-    // {
-    //   title: "Fitness App",
-    //   description: "Track your workouts and progress.",
-    //   content: (
-    //     <p>This app allows gamifies fitness, allowing users to log their workouts, track progress over time, and set fitness goals. We used React Native for cross-platform mobile use and used Figma to outline the UI experience, making it extremely intuitive and enjoyable for users to interact with.</p>
-    //   ),
-    //   canDownload: false,
-    //   downloadFile: '',
-    //   route: "/projects/fitnessApp",
-    // },
+    {
+      title: "HeartMetrics",
+      description: "A work environment health app.",
+
+      content: (
+        <p>
+          HeartMetrics is an app designed to facilitate the role of managers in monitoring and improving the health of their teams. It provides a platform to allow managers to gain insights into the overall well-being of their team in order to raise their employees' workplace health index (WHI). The app includes features such as integrations with calendar apps, Jira, and Asana; employee surveys; and an AI agent to assist with analysis and taking action to ensure the well-being of the team.
+        </p>
+      ),
+      canDownload: false,
+      downloadFile: '',
+      route: "/projects/heartmetrics",
+    },
   ]
   return (
     <section className="space-y-8">
@@ -32,8 +35,8 @@ function ProjectHome({ theme }) {
         >
           Projects
         </h2>
-        <div className="relative z-10 w-full mx-auto px-0 py-8 h-full overflow-y-auto">
-          <div className="space-y-8">
+        <div className="relative z-10 w-full mx-auto px-0 h-full overflow-y-auto">
+          <div className="space-y-10">
             {projectCards.map((card, index) => (
               <motion.div
                 key={index}
