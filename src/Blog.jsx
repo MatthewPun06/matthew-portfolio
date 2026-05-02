@@ -39,12 +39,20 @@ function Blog({ theme }) {
   const isSmallScreen = useIsSmallScreen();
 
   const logs = [
-    { title: 'rocks', month: 'December', date: '12/15/2025', content: '/blogs/12-7-25.txt' },
-    { title: 'reflections', month: 'November', date: '11/9/2025', content: '/blogs/11-9-25.txt' },
-    { title: 'stained glass', month: 'October', date: '10/19/2025', content: '/blogs/10-19-25.txt'},
-    { title: 'still waters run deep', month: 'October', date: '10/4/2025', content: '/blogs/10-4-25.txt'},
-    { title: 'gears', month: 'September', date: '9/19/2025', content: '/blogs/9-19-25.txt' },
-    { title: 'cognitive functions', month: 'September', date: '9/6/2025', content: '/blogs/9-6-25.txt'}  
+    { title: 'hearth', month: 'April 2026', date: '4/18/2026', content: '/blogs/4-18-26.txt' },
+    { title: 'petals', month: 'April 2026', date: '4/5/2026', content: '/blogs/4-5-26.txt' },
+    { title: 'connections and destinations', month: 'March 2026', date: '3/22/2026', content: '/blogs/3-22-26.txt'},
+    { title: 'medium', month: 'March 2026', date: '3/1/2026', content: '/blogs/3-1-26.txt' },
+    { title: 'splinter', month: 'February 2026', date: '2/18/2026', content: '/blogs/2-18-26.txt' },
+    { title: 'footsteps', month: 'February 2026', date: '2/1/2026', content: '/blogs/2-1-26.txt' },
+    { title: 'still -', month: 'January 2026', date: '1/31/2026', content: '/blogs/1-31-26.txt' },
+    { title: 'still', month: 'January 2026', date: '1/18/2026', content: '/blogs/1-18-26.txt'},
+    { title: 'rocks', month: 'December 2025', date: '12/7/2025', content: '/blogs/12-7-25.txt' },
+    { title: 'reflections', month: 'November 2025', date: '11/9/2025', content: '/blogs/11-9-25.txt' },
+    { title: 'stained glass', month: 'October 2025', date: '10/19/2025', content: '/blogs/10-19-25.txt'},
+    { title: 'still waters run deep', month: 'October 2025', date: '10/4/2025', content: '/blogs/10-4-25.txt'},
+    { title: 'gears', month: 'September 2025', date: '9/19/2025', content: '/blogs/9-19-25.txt' },
+    { title: 'cognitive functions', month: 'September 2025', date: '9/6/2025', content: '/blogs/9-6-25.txt'}  
   ];
   const monthRefs = React.useRef([]);
 

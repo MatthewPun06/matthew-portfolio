@@ -30,7 +30,7 @@ function About({ theme }) {
           <p className="mt-4">
             Now pursuing my education at Penn State University, I am readily embracing the breadth of my curiosity through things as simple as singing while running or as complex as integrating my life's lessons into the story of a video game, but
             nonetheless, the cross-section of my interests has been an invaluable source of inspiration and learning for me.
-            As a Presidential Leader in the Presidential Leadership Academy (PLA) at Penn State, I have been given the opportunity to develop my personal, professional, and leadership skills while work with a diverse group of talented individuals who share my passion for making a positive impact in the world.
+            As a Presidential Leader in the Presidential Leadership Academy (PLA) at Penn State, I have been given the opportunity to develop my personal, professional, and leadership skills while working with a diverse group of talented individuals who share my passion for making a positive impact in the world.
             This program has embranced my curiosity like no other through its interdisciplinary approach to learning and creating impact.
             Every day, I encounter new perspectives and ideas that spark new channels of curiosity I hadn't considered before, and it allows me to develop frameworks for thinking, learning, and leading that I can apply to every aspect of my life.
             
